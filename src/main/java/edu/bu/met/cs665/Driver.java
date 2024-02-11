@@ -1,4 +1,4 @@
 package edu.bu.met.cs665;
 
-public class Driver {
+public class Driver implements DriverSubscriber{
 }

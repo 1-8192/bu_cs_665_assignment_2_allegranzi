@@ -1,9 +1,9 @@
 /**
- * Name: FIRST_NAME LAST_NAME
+ * Name: Alessandro Allegranzi
  * Course: CS-665 Software Designs & Patterns
- * Date: MM/DD/YYYY
+ * Date: 02/22/2024
  * File Name: Main.java
- * Description: Write a description for this class
+ * Description: The Main executable class for the application.
  */
 
 package edu.bu.met.cs665;
