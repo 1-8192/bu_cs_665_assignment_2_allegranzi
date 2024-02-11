@@ -10,7 +10,7 @@
 Please add a paragraph or two overviewing the objectives of the assignment.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/1-8192/bu_cs_665_assignment_2_allegranzi
 
 # Implementation Description 
 
