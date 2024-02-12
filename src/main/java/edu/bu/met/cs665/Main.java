@@ -25,9 +25,17 @@ public class Main {
 
     Shop uberShop = new Shop();
 
-    Driver testDriver = new Driver("Thomas", uberShop);
+    Driver driverOne = new Driver("Thomas", uberShop);
+    Driver driverTwo = new Driver("Wanda", uberShop);
+    Driver driverThree = new Driver("Jane", uberShop);
+    Driver driverFour = new Driver("Bill", uberShop);
+    Driver driverFive = new Driver("Sam", uberShop);
 
-    uberShop.subscribe(testDriver);
+    uberShop.subscribe(driverOne);
+    uberShop.subscribe(driverTwo);
+    uberShop.subscribe(driverThree);
+    uberShop.subscribe(driverFour);
+    uberShop.subscribe(driverFive);
 
     DeliveryRequest testRequest = new DeliveryRequest(
           "cheeseburger", "123 Main St", "hold the mayo");
