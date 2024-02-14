@@ -24,12 +24,15 @@ public class Main {
   public static void main(String[] args) {
 
     Shop uberShop = new Shop();
+    Scooter scooter = new Scooter();
+    Taxi taxi = new Taxi();
+    Van van = new Van();
 
-    Driver driverOne = new Driver("Thomas", uberShop);
-    Driver driverTwo = new Driver("Wanda", uberShop);
-    Driver driverThree = new Driver("Jane", uberShop);
-    Driver driverFour = new Driver("Bill", uberShop);
-    Driver driverFive = new Driver("Sam", uberShop);
+    Driver driverOne = new Driver("Thomas", uberShop, scooter);
+    Driver driverTwo = new Driver("Wanda", uberShop, taxi);
+    Driver driverThree = new Driver("Jane", uberShop, van);
+    Driver driverFour = new Driver("Bill", uberShop, van);
+    Driver driverFive = new Driver("Sam", uberShop, scooter);
 
     uberShop.subscribe(driverOne);
     uberShop.subscribe(driverTwo);

@@ -16,12 +16,12 @@ public class Driver implements DriverSubscriber{
   /*
    * The driver name to distinguish the driver.
    */
-  private String name;
+  private final String name;
 
   /*
    * The shop the driver subscribes to.
    */
-  private Shop shop;
+  private final Shop shop;
 
   /*
    * The delivery request the driver receives.
@@ -29,11 +29,17 @@ public class Driver implements DriverSubscriber{
   private DeliveryRequest deliveryRequest;
 
   /*
+   * The delivery request the driver receives.
+   */
+  private final Vehicle vehicle;
+
+  /*
    * Class constructor.
    */
-  public Driver(String name, Shop shop) {
+  public Driver(String name, Shop shop, Vehicle vehicle) {
     this.name = name;
     this.shop = shop;
+    this.vehicle = vehicle;
   }
 
   /*
@@ -41,7 +47,7 @@ public class Driver implements DriverSubscriber{
    */
   public void update(DeliveryRequest deliveryRequest) {
     this.deliveryRequest = deliveryRequest;
-    System.out.println("Driver " + name + " has received the following delivery request: \n"
-    + deliveryRequest);
+    System.out.println("Driver " + name + ", license type: " + this.vehicle.getVehicleType()
+          + "\n" + "has received the following delivery request: \n" + deliveryRequest);
   }
 }
