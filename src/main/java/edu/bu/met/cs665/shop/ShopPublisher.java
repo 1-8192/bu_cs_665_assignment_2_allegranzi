@@ -14,7 +14,16 @@ import edu.bu.met.cs665.driver.DriverSubscriber;
  * Interface for observable/publisher classes to implement.
  */
 public interface ShopPublisher {
+
+  /**
+   * Subscribe interface method.
+   *
+   * @param subscriber the class that will observe this observable.
+   */
   void subscribe(DriverSubscriber subscriber);
 
+  /**
+   * Method to notify all observers of update.
+   */
   void notifySubscribers();
 }
