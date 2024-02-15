@@ -6,12 +6,15 @@
  * Description: Driver is the concrete observer class.
  */
 
-package edu.bu.met.cs665;
+package edu.bu.met.cs665.driver;
+
+import edu.bu.met.cs665.DeliveryRequest;
+import edu.bu.met.cs665.shop.Shop;
 
 /*
  * Class for drivers who received updates from the shop.
  */
-public class Driver implements DriverSubscriber{
+public class Driver implements DriverSubscriber {
 
   /*
    * The driver name to distinguish the driver.

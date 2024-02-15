@@ -6,7 +6,9 @@
  * Description: Interface for the observable/publisher class in the observer pattern.
  */
 
-package edu.bu.met.cs665;
+package edu.bu.met.cs665.shop;
+
+import edu.bu.met.cs665.driver.DriverSubscriber;
 
 /**
  * Interface for observable/publisher classes to implement.

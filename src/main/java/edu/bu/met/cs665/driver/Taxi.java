@@ -1,4 +1,6 @@
-package edu.bu.met.cs665;
+package edu.bu.met.cs665.driver;
+
+import edu.bu.met.cs665.driver.Vehicle;
 
 public class Taxi implements Vehicle {
 

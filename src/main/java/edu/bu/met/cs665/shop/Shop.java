@@ -6,7 +6,11 @@
  * Description: Concrete implementation of the ShopPublisher observable interface.
  */
 
-package edu.bu.met.cs665;
+package edu.bu.met.cs665.shop;
+
+import edu.bu.met.cs665.DeliveryRequest;
+import edu.bu.met.cs665.driver.DriverSubscriber;
+import edu.bu.met.cs665.shop.ShopPublisher;
 
 import java.util.ArrayList;
 
@@ -14,7 +18,7 @@ import java.util.ArrayList;
  * Shop is the concrete observable that sends out delivrey requests
  * to subscribed observers (drivers).
  */
-public class Shop implements ShopPublisher{
+public class Shop implements ShopPublisher {
 
   /*
    * The delivery notififation to send to drivers.

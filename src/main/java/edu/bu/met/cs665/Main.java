@@ -8,7 +8,12 @@
 
 package edu.bu.met.cs665;
 
-import edu.bu.met.cs665.example1.Person;
+
+import edu.bu.met.cs665.driver.Driver;
+import edu.bu.met.cs665.driver.Scooter;
+import edu.bu.met.cs665.driver.Taxi;
+import edu.bu.met.cs665.driver.Van;
+import edu.bu.met.cs665.shop.Shop;
 
 /**
  * This is the Main class.
