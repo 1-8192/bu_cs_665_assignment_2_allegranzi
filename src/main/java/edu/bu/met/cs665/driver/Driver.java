@@ -11,6 +11,8 @@ package edu.bu.met.cs665.driver;
 import edu.bu.met.cs665.DeliveryRequest;
 import edu.bu.met.cs665.shop.Shop;
 
+import java.util.ArrayList;
+
 /*
  * Class for drivers who received updates from the shop.
  */
@@ -52,5 +54,14 @@ public class Driver implements DriverSubscriber {
     this.deliveryRequest = deliveryRequest;
     System.out.println("Driver " + name + ", license type: " + this.vehicle.getVehicleType()
           + "\n" + "has received the following delivery request: \n" + deliveryRequest);
+  }
+
+  /**
+   * Getter method for the deliveryRequest. Used for unit testing.
+   *
+   * @return DeliveryRequest the request.
+   */
+  public DeliveryRequest getDeliveryRequest() {
+    return deliveryRequest;
   }
 }

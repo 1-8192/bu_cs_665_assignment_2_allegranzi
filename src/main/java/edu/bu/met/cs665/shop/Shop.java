@@ -10,6 +10,8 @@ package edu.bu.met.cs665.shop;
 
 import edu.bu.met.cs665.DeliveryRequest;
 import edu.bu.met.cs665.driver.DriverSubscriber;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -54,5 +56,14 @@ public class Shop implements ShopPublisher {
   public void setDeliveryRequest(DeliveryRequest deliveryRequest) {
     this.deliveryRequest = deliveryRequest;
     notifySubscribers();
+  }
+
+  /**
+   * Getter method for the subscribed drivers. Used for unit testing.
+   *
+   * @return ArrayList of drivers.
+   */
+  public ArrayList<DriverSubscriber> getDrivers() {
+    return drivers;
   }
 }
