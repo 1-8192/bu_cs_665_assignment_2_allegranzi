@@ -1,9 +1,8 @@
-package edu.bu.met.cs665;
-
-import static org.junit.Assert.assertEquals;
+package edu.bu.met.cs665.example1;
 
 import org.junit.Test;
-import edu.bu.met.cs665.example1.Person;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Write some Unit tests for your program like the examples below.

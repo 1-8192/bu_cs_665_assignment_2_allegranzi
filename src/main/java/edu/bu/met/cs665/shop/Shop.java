@@ -10,8 +10,6 @@ package edu.bu.met.cs665.shop;
 
 import edu.bu.met.cs665.DeliveryRequest;
 import edu.bu.met.cs665.driver.DriverSubscriber;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**

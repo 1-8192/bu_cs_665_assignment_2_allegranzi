@@ -8,7 +8,7 @@
 
 package edu.bu.met.cs665;
 
-/*
+/**
  * The request class represents a new delivery request from the shop to the drivers.
  */
 public class DeliveryRequest {
@@ -28,7 +28,7 @@ public class DeliveryRequest {
    */
   String message = "none";
 
-  /*
+  /**
    * Public constructor.
    */
   public DeliveryRequest(String location, String order, String message) {
@@ -39,7 +39,7 @@ public class DeliveryRequest {
     }
   }
 
-  /*
+  /**
    * Overriding toString() to print an informative string for the request.
    */
   @Override

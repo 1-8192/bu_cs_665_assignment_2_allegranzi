@@ -11,9 +11,7 @@ package edu.bu.met.cs665.driver;
 import edu.bu.met.cs665.DeliveryRequest;
 import edu.bu.met.cs665.shop.Shop;
 
-import java.util.ArrayList;
-
-/*
+/**
  * Class for drivers who received updates from the shop.
  */
 public class Driver implements DriverSubscriber {
@@ -38,7 +36,7 @@ public class Driver implements DriverSubscriber {
    */
   private final Vehicle vehicle;
 
-  /*
+  /**
    * Class constructor.
    */
   public Driver(String name, Shop shop, Vehicle vehicle) {
@@ -47,7 +45,7 @@ public class Driver implements DriverSubscriber {
     this.vehicle = vehicle;
   }
 
-  /*
+  /**
    * Concrete implementation for th interface update method.
    */
   public void update(DeliveryRequest deliveryRequest) {
