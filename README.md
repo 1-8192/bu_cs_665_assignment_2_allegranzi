@@ -11,7 +11,12 @@
 This application implements a notification system for a network of retailers and local freelance drivers in a bustling city. 
 The system aims to streamline the process of delivering products to customer destinations by generating and dispatching delivery requests to available van, taxi, and scooter drivers. 
 
+The application does not have any CLI or UI interaction, but running the main class will output some sample text. Main builds out the Shop observer and created 5 drivers subscribed to the shop.
+It then creates a hardcoded delivery request that then notifies all subscribed drivers.
 
+Example Screenshot:
+
+![example](images/example.png)
 
 # GitHub Repository Link:
 https://github.com/1-8192/bu_cs_665_assignment_2_allegranzi
@@ -36,6 +41,8 @@ easy for others to read and maintain.
 chosen.
 
 The main design pattern I implemented for this assignment is the observer pattern.
+
+I also applied the strategy pattern to fulfill the assignment description of drivers differentiated by vehicle type.
 
 
 # Maven Commands
