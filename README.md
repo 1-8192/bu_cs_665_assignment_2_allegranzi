@@ -7,7 +7,11 @@
 | Assignment # | 2                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+
+This application implements a notification system for a network of retailers and local freelance drivers in a bustling city. 
+The system aims to streamline the process of delivering products to customer destinations by generating and dispatching delivery requests to available van, taxi, and scooter drivers. 
+
+
 
 # GitHub Repository Link:
 https://github.com/1-8192/bu_cs_665_assignment_2_allegranzi
@@ -19,11 +23,19 @@ For each assignment, please answer the following:
 
 - Explain the level of flexibility in your implementation, including how new object types can
 be easily added or removed in the future.
+
+
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
+
+
 - Describe how you have avoided duplicated code and why it is important.
+
+
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
+
+The main design pattern I implemented for this assignment is the observer pattern.
 
 
 # Maven Commands
