@@ -11,8 +11,20 @@
 This application implements a notification system for a network of retailers and local freelance drivers in a bustling city. 
 The system aims to streamline the process of delivering products to customer destinations by generating and dispatching delivery requests to available van, taxi, and scooter drivers. 
 
-The application does not have any CLI or UI interaction, but running the main class will output some sample text. Main builds out the Shop observer and created 5 drivers subscribed to the shop.
-It then creates a hardcoded delivery request that then notifies all subscribed drivers.
+Application requirements from the assignment:
+● Classes for Shop, DeliveryRequest, and Driver must be incorporated into your
+implementation.
+● To test your solution, create an instance of Shop, a DeliveryRequest, and a minimum
+of 5 Driver objects.
+● During testing, broadcast a single Delivery Request and send notifications to all Drivers
+regarding the delivery.
+
+I have created the above classes using the Observer design pattern. The Shop class implements a ShopPublisher interface, and is the observable. The Driver class implements
+the DriverSubscriber interface, and is the observer. The DeliveryRequest class I built out is standalone, but contains useful information for a delivery, like
+address.
+
+The application does not have any CLI or UI interaction, but running the main class will output some sample text. The Main class builds out the Shop observer and creates 5 drivers subscribed to the shop.
+It then creates a hardcoded delivery request and notifies all subscribed drivers.
 
 Example Screenshot:
 
@@ -29,10 +41,13 @@ For each assignment, please answer the following:
 - Explain the level of flexibility in your implementation, including how new object types can
 be easily added or removed in the future.
 
+The use of interfaces makes this implementation very flexible. Adding a new publisher and subscriber is a matter of
+implementing the appropriate interface, which has a clear, simple contract.
 
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
 
+The classes I have constructed are fairly light-weight, and therefore readable and simple. 
 
 - Describe how you have avoided duplicated code and why it is important.
 
@@ -40,9 +55,16 @@ easy for others to read and maintain.
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
 
-The main design pattern I implemented for this assignment is the observer pattern.
+The main design pattern I implemented for this assignment is the observer pattern. The assignment requirements clearly ask ask for
+a central object that sends out dispatches to multiple listeners, so it is a classic use case for the observer pattern. I implemented a "push"
+solution where the central observable object sends out notices to all of its observers. 
 
-I also applied the strategy pattern to fulfill the assignment description of drivers differentiated by vehicle type.
+
+I also applied the strategy pattern to fulfill the assignment description of drivers differentiated by vehicle type. The application requirements and design did not 
+strictly call for this pattern, but I used in assignment 1 and thought it was a good, lighter-weight alternative to inheritance. Using the Strategy pattern, rather than creating
+distinct classes for TaxiDriver, VanDriver, etc., the single Driver class requires a vehicle type that implements the Vehicle interface. Because Driver instances are otherwie identical, I think it is
+a more readable design that a larger number of disparate driver classes that do the same thing. It might not be necessary, but the 
+gang of four recommends to favor composition over inheritance.
 
 
 # Maven Commands
