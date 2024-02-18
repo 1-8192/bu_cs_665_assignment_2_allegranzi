@@ -35,6 +35,7 @@ https://github.com/1-8192/bu_cs_665_assignment_2_allegranzi
 
 # Implementation Description 
 
+![UML Class Diagram](diagrams/cs_665_assignment_2i.drawio.pdf)
 
 For each assignment, please answer the following:
 
