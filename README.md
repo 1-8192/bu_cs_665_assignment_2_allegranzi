@@ -43,7 +43,7 @@ For each assignment, please answer the following:
 be easily added or removed in the future.
 
 The use of interfaces makes this implementation very flexible. Adding a new publisher and subscriber is a matter of
-implementing the appropriate interface, which has a clear, simple contract.
+implementing the appropriate interface, which has a clear, simple contract. 
 
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
@@ -56,17 +56,19 @@ The classes I have constructed are fairly light-weight, and therefore readable a
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
 
-The main design pattern I implemented for this assignment is the observer pattern. The assignment requirements clearly ask ask for
+The main design pattern I implemented for this assignment is the observer pattern. The assignment requirements clearly ask for
 a central object that sends out dispatches to multiple listeners, so it is a classic use case for the observer pattern. I implemented a "push"
-solution where the central observable object sends out notices to all of its observers. 
+solution where the central observable object sends out notices to all of its observers. The ShopPublisher class is the observable interface, and features a
+subscribe() method and notifySubscriber() method. The Shop class is the concrete observable class. DriverSubscriber is the observer interface, and the Driver
+class is the concrete observer. When a shop received a new delivery request, it automatically published the request to all subscribed drivers via the
+notifySubscribers() method call inside the setDeliveryRequest() method.
 
 
 I also applied the strategy pattern to fulfill the assignment description of drivers differentiated by vehicle type. The application requirements and design did not 
-strictly call for this pattern, but I used in assignment 1 and thought it was a good, lighter-weight alternative to inheritance. Using the Strategy pattern, rather than creating
+strictly call for this pattern, but I used it in assignment 1 and thought it was a good, lighter-weight alternative to inheritance. Using the Strategy pattern, rather than creating
 distinct classes for TaxiDriver, VanDriver, etc., the single Driver class requires a vehicle type that implements the Vehicle interface. Because Driver instances are otherwie identical, I think it is
 a more readable design that a larger number of disparate driver classes that do the same thing. It might not be necessary, but the 
 gang of four recommends to favor composition over inheritance.
-
 
 # Maven Commands
 
