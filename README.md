@@ -11,19 +11,19 @@
 This application implements a notification system for a network of retailers and local freelance drivers in a bustling city. 
 The system aims to streamline the process of delivering products to customer destinations by generating and dispatching delivery requests to available van, taxi, and scooter drivers. 
 
-Application requirements from the assignment:
+Application requirements from the assignment:\
 ● Classes for Shop, DeliveryRequest, and Driver must be incorporated into your
-implementation.
+implementation.\
 ● To test your solution, create an instance of Shop, a DeliveryRequest, and a minimum
-of 5 Driver objects.
+of 5 Driver objects.\
 ● During testing, broadcast a single Delivery Request and send notifications to all Drivers
-regarding the delivery.
+regarding the delivery.\
 
 I have created the above classes using the Observer design pattern. The Shop class implements a ShopPublisher interface, and is the observable. The Driver class implements
 the DriverSubscriber interface, and is the observer. The DeliveryRequest class I built out is standalone, but contains useful information for a delivery, like
 address.
 
-The application does not have any CLI or UI interaction, but running the main class will output some sample text. The Main class builds out the Shop observer and creates 5 drivers subscribed to the shop.
+The application does not have any CLI or UI interaction, but running the Main class will output some sample text. The Main class builds out the Shop observer and creates 5 drivers subscribed to the shop.
 It then creates a hardcoded delivery request and notifies all subscribed drivers.
 
 Example Screenshot:
@@ -43,15 +43,28 @@ For each assignment, please answer the following:
 be easily added or removed in the future.
 
 The use of interfaces makes this implementation very flexible. Adding a new publisher and subscriber is a matter of
-implementing the appropriate interface, which has a clear, simple contract. 
+implementing the appropriate interface, which has a clear, simple contract. Adding new drivers as subscribers is also very simple
+using the observer pattern set up in the code; it is just a matter of calling the subscribe() method on a shop.
+
+In addition, the Vehicle interface makes it easier to implement new driver vehicles in the future. For example, a motorcycle
+class could implement the interface, and would then be easy to plug into a new driver instance as their vehicle.
 
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
 
-The classes I have constructed are fairly light-weight, and therefore readable and simple. 
+The classes I have constructed are fairly light-weight, and therefore readable and simple. The observer and strategy patterns I implemented are
+both well-documented and the interface/class relationships are easy to read and understand. I have also included a good amount of unit test
+coverag to test the implementation and provide another layer of logic documentation.
 
 - Describe how you have avoided duplicated code and why it is important.
 
+Avoiding duplicate code is very important to keep applications readable and light-weight. Convoluted code can also make
+maintenance more difficult long term, as spotting and fixing bus can be a headache.
+
+My use of classes and interfaces has cut down on duplicate code needed to otherwise run the application in a more
+hardcoded style. The observer pattern makes it easy to publish events for subscribers to receive, rather than having to write 
+individual state updates for unrelated classes. The strategy pattern also reduced the number of very similar and basically duplicate
+driver classes I would have had to create.
 
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.

@@ -46,7 +46,7 @@ public class Driver implements DriverSubscriber {
   }
 
   /**
-   * Concrete implementation for th interface update method.
+   * Concrete implementation for the interface update method.
    */
   public void update(DeliveryRequest deliveryRequest) {
     this.deliveryRequest = deliveryRequest;

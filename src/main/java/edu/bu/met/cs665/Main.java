@@ -21,13 +21,12 @@ import edu.bu.met.cs665.shop.Shop;
 public class Main {
 
   /**
-   * A main method to run examples.
-   * You may use this method for development purposes as you start building your
-   * assignments/final project.  This could prove convenient to test as you are developing.
-   * However, please note that every assignment/final projects requires JUnit tests.
+   * The main method that sets up the observable and observer classes for a test run
+   * of the driver delivery system implementation.
    */
   public static void main(String[] args) {
 
+    // Creating necessary variables.
     Shop uberShop = new Shop();
     Scooter scooter = new Scooter();
     Taxi taxi = new Taxi();
@@ -39,15 +38,17 @@ public class Main {
     Driver driverFour = new Driver("Bill", uberShop, van);
     Driver driverFive = new Driver("Sam", uberShop, scooter);
 
+    DeliveryRequest testRequest = new DeliveryRequest(
+          "cheeseburger", "123 Main St", "hold the mayo");
+
+    // Subscribing 5 drivers to the shop.
     uberShop.subscribe(driverOne);
     uberShop.subscribe(driverTwo);
     uberShop.subscribe(driverThree);
     uberShop.subscribe(driverFour);
     uberShop.subscribe(driverFive);
 
-    DeliveryRequest testRequest = new DeliveryRequest(
-          "cheeseburger", "123 Main St", "hold the mayo");
-
+    // Testing the notification.
     uberShop.setDeliveryRequest(testRequest);
   }
 }

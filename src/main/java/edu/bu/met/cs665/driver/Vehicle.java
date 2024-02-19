@@ -14,7 +14,7 @@ package edu.bu.met.cs665.driver;
 public interface Vehicle {
 
   /**
-   * Displays the string value of the vehilde type.
+   * Displays the string value of the vehicle type.
    *
    * @return string the name of the vehicle type.
    */

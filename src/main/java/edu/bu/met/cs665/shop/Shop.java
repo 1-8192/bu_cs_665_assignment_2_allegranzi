@@ -13,7 +13,7 @@ import edu.bu.met.cs665.driver.DriverSubscriber;
 import java.util.ArrayList;
 
 /**
- * Shop is the concrete observable that sends out delivrey requests
+ * Shop is the concrete observable that sends out delivery requests
  * to subscribed observers (drivers).
  */
 public class Shop implements ShopPublisher {
